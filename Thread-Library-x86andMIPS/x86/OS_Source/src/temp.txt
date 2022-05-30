@@ -1,0 +1,47 @@
+    /*printf("Initializing Hardware, Stage 1\n");
+    
+    #ifdef GRAPHICSMODE
+        Desktop desktop(320,200, 0x00,0x00,0xA8);
+    #endif
+    
+    DriverManager drvManager;
+    
+        #ifdef GRAPHICSMODE
+            KeyboardDriver keyboard(&interrupts, &desktop);
+        #else
+            PrintfKeyboardEventHandler kbhandler;
+            KeyboardDriver keyboard(&interrupts, &kbhandler);
+        #endif
+        drvManager.AddDriver(&keyboard);
+        
+    
+        #ifdef GRAPHICSMODE
+            MouseDriver mouse(&interrupts, &desktop);
+        #else
+            MouseToConsole mousehandler;
+            MouseDriver mouse(&interrupts, &mousehandler);
+        #endif
+        drvManager.AddDriver(&mouse);
+        
+        PeripheralComponentInterconnectController PCIController;
+        PCIController.SelectDrivers(&drvManager, &interrupts);
+
+        VideoGraphicsArray vga;
+        
+    printf("Initializing Hardware, Stage 2\n");
+        drvManager.ActivateAll();
+        
+    printf("Initializing Hardware, Stage 3\n");
+
+    #ifdef GRAPHICSMODE
+        vga.SetMode(320,200,8);
+        Window win1(&desktop, 10,10,20,20, 0xA8,0x00,0x00);
+        desktop.AddChild(&win1);
+        Window win2(&desktop, 40,15,30,30, 0x00,0xA8,0x00);
+        desktop.AddChild(&win2);
+    #endif*/
+
+    interrupt active
+    #ifdef GRAPHICSMODE
+        desktop.Draw(&vga);
+    #endif

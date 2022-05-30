@@ -1,0 +1,22 @@
+
+Muharrem Ozan Yeşiller
+
+	# 171044033 #
+
+	Homework - 2
+
+###########################################################################
+Spim üstünde çalışan shelli çalıştırmak için yapılması gerekenler:        #
+#######################################################################################################
+1) Eğer yoksa CPU içine boş bir exceptions.s adında bir dosya oluşturulmalı                           #
+2) syscall.cpp ve syscall.h CPU klasörü içine kopyalanmalı                                            #
+3) SPIMOS_GTU_1.s, SPIMOS_GTU_2.s ve init.s spim klasörüne taşınmalıdır                               # 
+4) spimin kendi makefile ını kullanarak terminale "make clean" yazılmalıdır                           #
+5) daha sonra terminale make yazarak gerekli derlemeler yapılmalıdır								  #
+6) "./spim -file SPIMOS_GTU1.s" ya da "./spim -file SPIMOS_GTU2.s" komutu ile shell çalıştırılmalıdır #
+#######################################################################################################
+
+SPIMOS_GTU1.s: init.s yi başlatması için bir sistem çağrısı cağırır parametre olarak 1 verir
+SPIMOS_GTU2.s: init.s yi başlatması için bir sistem çağrısı çağırır parametre olarak 2 verir
+init.s: tüm kernel programının bulunduğu dosyadır içeriğinden raporda bahsedilmiştir. implementasyon olarak da
+kod üstünde hangi labelların ne işe yaradığını anlatan yorum satırları mevcuttur.
